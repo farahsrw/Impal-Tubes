@@ -5,6 +5,10 @@ from Controllers.masuk import masuk_bp
 from Controllers.daftar import daftar_bp
 from Controllers.homepage_customer import homepage_customer_bp
 from Controllers.keluar import keluar_bp  # Add this import
+from Controllers.homepage_merchant import homepage_merchant_bp
+from Controllers.verifikasipengguna import verifikasipengguna_bp
+from Controllers.detailpesanan_merch import detailpesanan_merch_bp
+#Add setiap page baru
 
 # Initialize Flask app
 app = Flask(__name__, template_folder='Templates', static_folder='Static')
@@ -20,6 +24,10 @@ app.register_blueprint(masuk_bp)
 app.register_blueprint(daftar_bp)
 app.register_blueprint(homepage_customer_bp)
 app.register_blueprint(keluar_bp)  # Register the logout blueprint
+app.register_blueprint(homepage_merchant_bp)
+app.register_blueprint(verifikasipengguna_bp)
+app.register_blueprint(detailpesanan_merch_bp)
+#Add setiap page baru
 
 if __name__ == '__main__':
     app.run(debug=True)
